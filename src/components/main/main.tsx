@@ -16,7 +16,7 @@ export const Main = () => {
     return (
         <div className={styles.main}>
             <Contacts activeContactHandler={activeContactHandler} activeContact={activeContact} contactsDataForSort={contactsDataForSort} setContactsDataForSort={setContactsDataForSort}/>
-            <Account activeContact={activeContact} contactsDataForSort={contactsDataForSort}/>
+            <Account activeContact={activeContact} contactsDataForSort={contactsDataForSort} setContactsDataForSort={setContactsDataForSort}/>
         </div>
     );
 };

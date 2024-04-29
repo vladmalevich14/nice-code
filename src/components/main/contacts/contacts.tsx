@@ -16,7 +16,12 @@ type PropsType = {
     setContactsDataForSort: Dispatch<SetStateAction<ContactType[]>>
 }
 
-export const Contacts = ({activeContactHandler, activeContact, contactsDataForSort, setContactsDataForSort}: PropsType) => {
+export const Contacts = ({
+                             activeContactHandler,
+                             activeContact,
+                             contactsDataForSort,
+                             setContactsDataForSort
+                         }: PropsType) => {
     const [isSearchInputActive, setIsSearchInputActive] = useState<boolean>(false);
     const [value, setValue] = useState<string>('');
 
@@ -29,16 +34,15 @@ export const Contacts = ({activeContactHandler, activeContact, contactsDataForSo
     }
 
     const sortContactsHandler = () => {
-        if(contactsDataForSort[contactsDataForSort.length-1].id !== 1) {
+        if(contactsDataForSort[0].id === 1) {
             setContactsDataForSort(prevState => {
-                return [...prevState.sort((a, b) => b.id - a.id)]
+                return [...prevState.sort((a, b) => a.name.localeCompare(b.name, 'ru'))]
             })
         } else {
             setContactsDataForSort(prevState => {
                 return [...prevState.sort((a, b) => a.id - b.id)]
             })
         }
-
     }
 
     const addContactHandler = () => {
