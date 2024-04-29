@@ -1,9 +1,10 @@
-import styles from './contactItem.module.scss'
 import {TelegramComponent} from "assets/svg/telegram";
 import {WarningComponent} from "assets/svg/warning";
-import {useEffect, useState} from "react";
+import {Dispatch, SetStateAction} from "react";
 import {CheckboxActiveComponent} from "assets/svg/checkboxActive";
 import {CheckboxInactiveComponent} from "assets/svg/checkboxInactive";
+import {ContactType} from "types/dataTypes";
+import styles from './contactItem.module.scss'
 
 type PropsType = {
     photo: string
@@ -15,7 +16,8 @@ type PropsType = {
     activeContactHandler: (id: number) => void
     isActionsActive: boolean
     selectedContactsCountChanger: (isActiveCheckbox: boolean) => void
-    isActiveCheckboxStatus: boolean
+    checked: boolean
+    setContactsDataForSort: Dispatch<SetStateAction<ContactType[]>>
 }
 
 export const ContactItem = ({
@@ -28,26 +30,19 @@ export const ContactItem = ({
                                 activeContact,
                                 isActionsActive,
                                 selectedContactsCountChanger,
-                                isActiveCheckboxStatus
+                                checked,
+                                setContactsDataForSort
                             }: PropsType) => {
-    const [isActiveCheckbox, setIsActiveCheckbox] = useState<boolean>(false);
-
     const checkboxActiveHandler = () => {
-        setIsActiveCheckbox(!isActiveCheckbox)
-        selectedContactsCountChanger(isActiveCheckbox)
+        selectedContactsCountChanger(checked)
+        setContactsDataForSort(prevState => {
+            return prevState.map(el => el.id === id ? {...el, checked: !checked} : el)
+        })
     }
 
     const activeItemHandler = (id: number) => {
         activeContactHandler(id)
     }
-
-    useEffect(() => {
-        if (isActiveCheckboxStatus) {
-            setIsActiveCheckbox(true)
-        } else {
-            setIsActiveCheckbox(false)
-        }
-    }, [isActiveCheckboxStatus]);
 
     return (
         <div
@@ -57,7 +52,7 @@ export const ContactItem = ({
             <div className={styles.contactInfo}>
                 {isActionsActive &&
                     <button className={styles.contactInfoIcon} onClick={checkboxActiveHandler}>
-                        {isActiveCheckbox ? <CheckboxActiveComponent/> : <CheckboxInactiveComponent/>}
+                        {checked ? <CheckboxActiveComponent/> : <CheckboxInactiveComponent/>}
                     </button>}
                 <img src={photo} alt={photo}/>
                 <span>{name.split(' ').slice(0, 2).join(' ')}</span>

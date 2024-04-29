@@ -49,7 +49,8 @@ export const Contacts = ({activeContactHandler, activeContact, contactsDataForSo
             notification: '',
             age: `${randomInteger(5, 20)} лет`,
             gender: 'жен',
-            pin: false
+            pin: false,
+            checked: false
         }
 
         setContactsDataForSort(prevState => {
@@ -95,7 +96,7 @@ export const Contacts = ({activeContactHandler, activeContact, contactsDataForSo
                 }
             </div>
             <ContactsBlock activeContactHandler={activeContactHandler} activeContact={activeContact}
-                           contactsDataForSort={contactsDataForSort}/>
+                           contactsDataForSort={contactsDataForSort} setContactsDataForSort={setContactsDataForSort}/>
         </div>
     );
 };

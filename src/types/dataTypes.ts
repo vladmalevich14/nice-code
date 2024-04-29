@@ -6,6 +6,7 @@ export type ContactType = {
     age: string
     gender: string
     pin: boolean
+    checked: boolean
 }
 
 export type NotesDataType = {
