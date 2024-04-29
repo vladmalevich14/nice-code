@@ -11,6 +11,7 @@ import {randomInteger} from "utils/randomInteger";
 import {ConsultationsDataType, ContactType, EventsDataType, NotesDataType, VideoDataType} from "types/dataTypes";
 import third from "assets/images/third.png";
 import fourth from "assets/images/fourth.png";
+import {contactsData} from "fakeData/contactsData";
 
 type PropsType = {
     activeContact: number
@@ -69,7 +70,8 @@ export const Account = ({activeContact, contactsDataForSort}: PropsType) => {
         }
     }
 
-    const user = contactsDataForSort.filter(el => el.id === activeContact)
+    const userArr = contactsDataForSort.filter(el => el.id === activeContact)
+    const user = userArr.length ? userArr : contactsData.filter(el => el.id === activeContact)
 
     return (
         <div className={styles.account}>
