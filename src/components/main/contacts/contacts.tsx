@@ -4,10 +4,10 @@ import {ChangeEvent, Dispatch, SetStateAction, useEffect, useState} from "react"
 import {LoopComponent} from "assets/svg/loop";
 import {FilterComponent} from "assets/svg/filter";
 import {PlusComponent} from "assets/svg/plus";
-import {contactsData} from "fakeData/contactsData";
 import Noname from 'assets/images/contacts/no-name.png'
 import {randomInteger} from "utils/randomInteger";
 import {ContactType} from "types/dataTypes";
+import {contactsData} from "fakeData/contactsData";
 
 type PropsType = {
     activeContactHandler: (id: number) => void
@@ -52,6 +52,8 @@ export const Contacts = ({activeContactHandler, activeContact, contactsDataForSo
             pin: false,
             checked: false
         }
+
+        contactsData.unshift(newUser)
 
         setContactsDataForSort(prevState => {
             return [newUser, ...prevState]
