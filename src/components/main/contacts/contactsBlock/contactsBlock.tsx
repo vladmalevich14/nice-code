@@ -54,7 +54,7 @@ export const ContactsBlock = ({activeContactHandler, activeContact, contactsData
         } else {
             setIsActiveCheckbox(true)
         }
-    }, [selectedContactsCount]);
+    }, [selectedContactsCount, contactsDataForSort]);
 
     return (
         <div className={styles.contactsBlock}>
