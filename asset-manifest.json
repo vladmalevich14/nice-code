@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/nice-code/static/css/main.c4739a29.css",
+    "main.js": "/nice-code/static/js/main.5964cffc.js",
+    "static/js/453.14ffd290.chunk.js": "/nice-code/static/js/453.14ffd290.chunk.js",
+    "static/media/map.png": "/nice-code/static/media/map.fcdd845c9e8f90b21aec.png",
+    "static/media/SFPRODISPLAYREGULAR.OTF": "/nice-code/static/media/SFPRODISPLAYREGULAR.d1f5e6e16dd4f75c3950.OTF",
+    "static/media/fourth.png": "/nice-code/static/media/fourth.4de2f743ff19ea13a651.png",
+    "static/media/second.png": "/nice-code/static/media/second.5d695c0ecc0737b62a64.png",
+    "static/media/first.png": "/nice-code/static/media/first.6e2e02137f73f0dda69e.png",
+    "static/media/third.png": "/nice-code/static/media/third.ce621ab26119d063410a.png",
+    "static/media/kravtsova-alexandra.png": "/nice-code/static/media/kravtsova-alexandra.711ff079e25e2e1e4c90.png",
+    "static/media/rozhkov-denis.png": "/nice-code/static/media/rozhkov-denis.5dce139f5a48cb681884.png",
+    "static/media/video.svg": "/nice-code/static/media/video.d41c0aeac888c42c7b690b9909c2e78d.svg",
+    "static/media/calendar.svg": "/nice-code/static/media/calendar.f5331431952d53d293cf9088b1e485cf.svg",
+    "static/media/time.svg": "/nice-code/static/media/time.1051e20b5869b720724832364d755abb.svg",
+    "index.html": "/nice-code/index.html",
+    "main.c4739a29.css.map": "/nice-code/static/css/main.c4739a29.css.map",
+    "main.5964cffc.js.map": "/nice-code/static/js/main.5964cffc.js.map",
+    "453.14ffd290.chunk.js.map": "/nice-code/static/js/453.14ffd290.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4739a29.css",
+    "static/js/main.5964cffc.js"
+  ]
+}
