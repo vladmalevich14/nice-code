@@ -1,26 +1,71 @@
-import styles from './'
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 66px;
+  border: 1px solid rgba(205, 205, 205, 1);
+  border-radius: 5px;
+  padding: 10px;
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
 
-type PropsType = {
-    name: string
-    date: string
-    confirmation?: boolean
+  &:hover {
+    border: 1px solid rgba(65, 152, 197, 1);
+    cursor: pointer;
+
+    .itemInfoContainerIcon {
+      background: rgba(65, 152, 197, 1);
+
+      svg {
+        path {
+          fill: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+
+  &InfoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &Icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      background: rgba(241, 242, 243, 1);
+      border-radius: 50px;
+      border-left: 3px solid transparent;
+    }
+
+    &Data {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      h5 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.71px;
+        color: rgba(97, 111, 130, 1);
+      }
+    }
+  }
+
+  &Confirmation {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(255, 0, 0, 1);
+  }
+
 }
-
-export const ConsultationItem = ({name, date, confirmation = false}: PropsType) => {
-    return (
-        <div className={styles.item}>
-            <div>
-            <div>
-
-            </div>
-            <div>
-                <h5>{name}</h5>
-                <span>{date}</span>
-            </div>
-            </div>
-
-            {confirmation && <div>Не подтверждена</div>}
-
-        </div>
-    );
-};

@@ -1,4 +1,5 @@
-.dots {
+.dropDown {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,4 +23,45 @@
     }
   }
 
+  &List {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 9px 0;
+    width: 230px;
+    box-shadow: 0 2px 16px 0 rgba(34, 34, 34, 0.16);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 1);
+    z-index: 1;
+
+    &Item {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.71px;
+      background: rgba(255, 255, 255, 1);
+
+      &:hover {
+        background: rgba(241, 242, 243, 1);
+      }
+
+      &:active {
+        animation-timing-function: ease-out;
+        animation-duration: 300ms;
+      }
+    }
+  }
+
+}
+
+.dropDownActive {
+  background: rgba(65, 152, 197, 1) !important;
+
+  svg {
+    path {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
 }

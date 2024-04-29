@@ -1,0 +1,139 @@
+.account {
+  width: 744px;
+
+  &UserInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 110px;
+    padding: 10px 23px 10px 10px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(30, 30, 30, 0.1);
+    background: rgba(255, 255, 255, 1);
+
+    &Block {
+      display: flex;
+      gap: 14px;
+
+      img {
+        height: 90px;
+        width: 90px;
+      }
+
+      div {
+        text-align: left;
+
+        h5 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.32px;
+      }
+    }
+
+    &Dots {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &Switcher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    height: 26px;
+    padding: 3px 20px 3px 10px;
+
+
+    &Container {
+      display: flex;
+      gap: 20px;
+    }
+
+    &Item {
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(97, 111, 130, 1);
+      background: none;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &ActiveItem {
+      color: rgba(65, 152, 197, 1);
+    }
+
+    &AddBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.71px;
+      text-align: right;
+      color: rgba(97, 111, 130, 1);
+      border: none;
+      background: none;
+
+      &:hover {
+        cursor: pointer;
+        color: rgba(65, 152, 197, 1);
+
+        div {
+          cursor: pointer;
+          border: 1.08px solid rgba(65, 152, 197, 1);
+        }
+
+        svg {
+          path {
+            fill: rgba(65, 152, 197, 1)
+          }
+        }
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border: 1.08px solid rgba(97, 111, 130, 1);
+        border-radius: 50px;
+      }
+    }
+
+    &Separator {
+      height: 18px;
+      border-right: 1px solid rgba(205, 205, 205, 1);
+    }
+  }
+
+  &Wall {
+    height: 784px;
+    padding: 15px 23px 15px 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(30, 30, 30, 0.1);
+
+
+  }
+}

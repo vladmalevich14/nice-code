@@ -2,6 +2,7 @@
   display: flex;
 
   div {
+    margin-bottom: 5px;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -17,5 +18,23 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  &Img {
+    border: 5px solid rgba(205, 205, 205, 1);
+    border-radius: 4px;
+    width: 199px;
+    height: 134px;
+    margin-top: 6px;
+  }
+
+  &Input {
+    height: 100%;
+    width: 672px;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
   }
 }

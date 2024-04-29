@@ -1,16 +1,20 @@
 import * as React from "react"
 
-export const CameraComponent = (props: any) => (
+export const CheckboxActiveComponent = (props: any) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={15}
-        height={11}
+        width={18}
+        height={18}
         fill="none"
         {...props}
     >
+        <rect width={18} height={18} fill="#4198C5" rx={4} />
+        <rect width={18} height={18} stroke="#CDCDCD" rx={4} />
         <path
-            fill="#4198C5"
-            d="M14.746 1.83a.536.536 0 0 0-.521-.024l-3.51 1.756V2.286c0-.888-.72-1.608-1.608-1.608h-7.5C.72.678 0 1.398 0 2.286v6.428c0 .888.72 1.607 1.607 1.607h7.5c.888 0 1.607-.72 1.607-1.607V7.438l3.51 1.758A.536.536 0 0 0 15 8.714V2.286a.536.536 0 0 0-.254-.456ZM9.643 8.714c0 .296-.24.536-.536.536h-7.5a.536.536 0 0 1-.536-.536V2.286c0-.296.24-.536.536-.536h7.5c.296 0 .536.24.536.536v6.428Zm4.286-.867L10.714 6.24V4.76l3.215-1.608v4.695Z"
+            fill="#fff"
+            fillRule="evenodd"
+            d="m7.949 10.419-1.8-1.838L5 9.755 7.001 11.8 8.177 13 13 5.953 11.668 5l-3.719 5.419Z"
+            clipRule="evenodd"
         />
     </svg>
 )

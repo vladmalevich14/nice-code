@@ -1,7 +1,5 @@
-export const Consultations = () => {
-    return (
-        <div>
-
-        </div>
-    );
-};
+.consultations {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

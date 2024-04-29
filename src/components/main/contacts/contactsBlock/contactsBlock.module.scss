@@ -1,13 +1,119 @@
-import {contactsData} from "fakeData/contactsData";
-import {ContactItem} from "components/main/contacts/contactsBlock/contactItem/contactItem";
-import styles from ''
+.contactsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-export const ContactsBlock = () => {
-    return (
-        <div className={styles.contactsBlock}>
-            {contactsData.map(el=>{
-                return <ContactItem photo={el.photo} name={el.name} notification={el.notification}/>
-            })}
-        </div>
-    );
-};
+  &Actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px 0 15px;
+    height: 20px;
+
+    &Btns {
+      display: flex;
+      gap: 15px;
+
+      button {
+        border: none;
+        background: none;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.71px;
+        color: rgba(97, 111, 130, 1);
+
+        &:hover {
+          color: rgba(65, 152, 197, 1);
+          cursor: pointer;
+        }
+      }
+    }
+
+    &BtnSelect {
+      border: none;
+      background: none;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.71px;
+      color: rgba(97, 111, 130, 1);
+
+      &:hover {
+        color: rgba(65, 152, 197, 1);
+        cursor: pointer;
+      }
+    }
+
+    &Count {
+      text-align: center;
+      border-top: 1px solid rgba(97, 111, 130, 1);
+      border-right: 1px solid rgba(97, 111, 130, 1);
+      height: 18px;
+      width: 28px;
+      padding: 2px 4px;
+      background: rgba(97, 111, 130, 1);
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &CountActive {
+      border-top: 1px solid rgba(65, 152, 197, 1);
+      border-right: 1px solid rgba(65, 152, 197, 1);
+      background: rgba(65, 152, 197, 1);
+    }
+
+    &Checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &Icon {
+        border: none;
+        background: none;
+        padding: 0;
+        height: 18px;
+        width: 18px;
+        border-radius: 4px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      button {
+        border: none;
+        background: none;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: rgba(97, 111, 130, 1);
+      }
+    }
+  }
+
+  &Items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 840px;
+    overflow: auto;
+    padding: 2px 3px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: rgba(241, 242, 244, 1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(97, 111, 130, 1);
+      border-radius: 50px;
+      box-shadow: inset 1px 1px 10px #f3faf7;
+    }
+  }
+}

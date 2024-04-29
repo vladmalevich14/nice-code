@@ -1,0 +1,96 @@
+.contacts {
+  width: 366px;
+
+  &SortBtns {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0 10px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 4px 0 rgba(19, 19, 19, 0.1);
+    border-radius: 5px;
+
+    &Active {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+
+      &Input {
+        width: 90%;
+        border: 1px solid rgba(205, 205, 205, 1);
+        border-radius: 90px;
+        padding: 10px 10px 10px 35px;
+      }
+
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-results-button,
+      input[type="search"]::-webkit-search-results-decoration {
+        -webkit-appearance:none;
+      }
+
+      &Loop {
+        position: absolute;
+        top: 9px;
+        left: 8px;
+      }
+
+      &Cross {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+        width: 34px;
+        background: rgba(241, 242, 243, 1);
+        border-radius: 50px;
+        rotate: 45deg;
+
+        &:hover {
+          cursor: pointer;
+          background: rgba(65, 152, 197, 1);
+
+          svg {
+            path {
+              fill: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+      }
+    }
+
+    &Inactive {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+        width: 34px;
+        background: rgba(241, 242, 243, 1);
+        border-radius: 50px;
+
+        &:hover {
+          cursor: pointer;
+          background: rgba(65, 152, 197, 1);
+
+          svg {
+            path {
+              fill: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+      }
+
+      &Box {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}

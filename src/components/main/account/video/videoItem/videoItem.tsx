@@ -1,28 +1,26 @@
-import styles from './consultationItem.module.scss'
-import {CameraComponent} from "assets/svg/camera";
-import {ReceptionComponent} from "assets/svg/reception";
+import styles from './videoItem.module.scss'
 
 type PropsType = {
     name: string
-    date: string
-    confirmation?: boolean
+    title: string
+    date?: string
+    img: string
 }
 
-export const ConsultationItem = ({name, date, confirmation = false}: PropsType) => {
+export const VideoItem = ({name, date, title, img}: PropsType) => {
     return (
         <div className={styles.item}>
             <div className={styles.itemInfoContainer}>
-                <div className={styles.itemInfoContainerIcon}>
-                    {name === 'Online-консультация' && <CameraComponent />}
-                    {name === 'Личный приём' && <ReceptionComponent />}
+                <div className={styles.itemInfoContainerVideo}>
+                    <img src={img} alt="video cover"/>
                 </div>
                 <div className={styles.itemInfoContainerData}>
-                    <h5>{name}</h5>
-                    <span>{date}</span>
+                    <h5>{title}</h5>
+                    <span>{name}</span>
                 </div>
             </div>
 
-            {confirmation && <div className={styles.itemConfirmation}>Не подтверждена</div>}
+            {date && <div className={styles.itemDate}>{date}</div>}
 
         </div>
     );

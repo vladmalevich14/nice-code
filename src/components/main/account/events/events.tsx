@@ -1,26 +1,19 @@
-import styles from "./video.module.scss";
-import {VideoItem} from "components/main/account/video/videoItem/videoItem";
-import first from '../../../../assets/images/first.png'
-import second from '../../../../assets/images/second.png'
-import third from '../../../../assets/images/third.png'
+import {EventsItem} from "components/main/account/events/eventsItem/eventsItem";
+import styles from "./events.module.scss";
+import {EventsDataType} from "types/dataTypes";
+import {useAutoAnimate} from "@formkit/auto-animate/react";
 
-export const Video = () => {
+type PropsType = {
+    eventsDataForAdding: EventsDataType[]
+}
 
-    const videoData = [
-        {img: first, title: 'Крабик, ходьба в бок в приседе с двумя резинками Кра…', name: 'Астахова Е.В.', date: ''},
-        {img: second, title: 'Разминка для локтевого сустава', name: 'Астахова Е.В.', date: '15.01.2019 - 22.01.2019'},
-        {
-            img: third,
-            title: 'Разминка для локтевого суставаРазминка для локтевого..',
-            name: 'Астахова Е.В.',
-            date: '15.01.2019 - 22.01.2019'
-        }
-    ]
-
+export const Events = ({eventsDataForAdding}: PropsType) => {
+    const [listRef] = useAutoAnimate<HTMLDivElement>()
     return (
-        <div className={styles.video}>
-            {videoData.map(el => {
-                return <VideoItem title={el.title} name={el.name} date={el.date} img={el.img}/>
+        <div className={styles.events} ref={listRef}>
+            {eventsDataForAdding.map(el => {
+                return <EventsItem key={el.id} title={el.title} type={el.type} date={el.date} img={el.img}
+                                   time={el.time}/>
             })}
         </div>
     );

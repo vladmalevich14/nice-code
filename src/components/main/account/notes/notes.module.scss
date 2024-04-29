@@ -1,22 +1,5 @@
-import {Post} from "components/main/account/Post/post";
-import map from "assets/images/map.png";
-import styles from "components/main/account/account.module.scss";
-
-export const Notes = () => {
-    return (
-        <div>
-            <Post>
-                Физические упражнения способствуют активизации мышечных сокращений, кровотока в тканях, снимают
-                отечность, повышают энергетические возможности мышц. Улучшенное питание мышечной ткани ускоряет
-                замещение различных посттравматических дефектов в самих мышцах, костной ткани, связках и сухожилиях.
-            </Post>
-            <Post>
-                Улучшенное питание мышечной ткани ускоряет замещение различных посттравматических дефектов в самих
-                мышцах, костной ткани, связках и сухожилиях.
-                <div>
-                    <img src={map} alt="map" className={styles.accountWallImg}/>
-                </div>
-            </Post>
-        </div>
-    );
-};
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
