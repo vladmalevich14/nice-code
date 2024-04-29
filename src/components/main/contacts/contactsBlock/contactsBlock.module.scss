@@ -1,0 +1,13 @@
+import {contactsData} from "fakeData/contactsData";
+import {ContactItem} from "components/main/contacts/contactsBlock/contactItem/contactItem";
+import styles from ''
+
+export const ContactsBlock = () => {
+    return (
+        <div className={styles.contactsBlock}>
+            {contactsData.map(el=>{
+                return <ContactItem photo={el.photo} name={el.name} notification={el.notification}/>
+            })}
+        </div>
+    );
+};

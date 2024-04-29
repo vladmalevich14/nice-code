@@ -1,0 +1,21 @@
+.post {
+  display: flex;
+
+  div {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+    span {
+      margin-right: 10px;
+      color: rgba(97, 111, 130, 1);
+    }
+  }
+
+  &Dots {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

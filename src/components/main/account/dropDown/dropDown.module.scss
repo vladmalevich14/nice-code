@@ -1,0 +1,25 @@
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(241, 242, 243, 1);
+  }
+
+  &:focus, &:active {
+    background: rgba(65, 152, 197, 1);
+
+    svg {
+      path {
+        fill: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+}

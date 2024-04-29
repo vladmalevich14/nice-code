@@ -1,0 +1,13 @@
+type PropsType = {
+    photo: any
+    name: string
+    notification: string
+}
+
+export const ContactItem = ({photo, name, notification}: PropsType) => {
+    return (
+        <div className={styles.contact}>
+
+        </div>
+    );
+};

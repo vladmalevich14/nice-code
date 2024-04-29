@@ -1,0 +1,26 @@
+import styles from './'
+
+type PropsType = {
+    name: string
+    date: string
+    confirmation?: boolean
+}
+
+export const ConsultationItem = ({name, date, confirmation = false}: PropsType) => {
+    return (
+        <div className={styles.item}>
+            <div>
+            <div>
+
+            </div>
+            <div>
+                <h5>{name}</h5>
+                <span>{date}</span>
+            </div>
+            </div>
+
+            {confirmation && <div>Не подтверждена</div>}
+
+        </div>
+    );
+};
