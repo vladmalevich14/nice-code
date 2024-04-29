@@ -1,6 +1,6 @@
 import {ContactsBlock} from "components/main/contacts/contactsBlock/contactsBlock";
 import styles from "./contacts.module.scss";
-import {ChangeEvent, useEffect, useState} from "react";
+import {ChangeEvent, Dispatch, SetStateAction, useEffect, useState} from "react";
 import {LoopComponent} from "assets/svg/loop";
 import {FilterComponent} from "assets/svg/filter";
 import {PlusComponent} from "assets/svg/plus";
@@ -12,12 +12,13 @@ import {ContactType} from "types/dataTypes";
 type PropsType = {
     activeContactHandler: (id: number) => void
     activeContact: number
+    contactsDataForSort: ContactType[]
+    setContactsDataForSort: Dispatch<SetStateAction<ContactType[]>>
 }
 
-export const Contacts = ({activeContactHandler, activeContact}: PropsType) => {
+export const Contacts = ({activeContactHandler, activeContact, contactsDataForSort, setContactsDataForSort}: PropsType) => {
     const [isSearchInputActive, setIsSearchInputActive] = useState<boolean>(false);
     const [value, setValue] = useState<string>('');
-    const [contactsDataForSort, setContactsDataForSort] = useState<ContactType[]>(contactsData);
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)

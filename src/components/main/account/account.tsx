@@ -6,18 +6,18 @@ import {Consultations} from "components/main/account/сonsultations/consultation
 import {Video} from "components/main/account/video/video";
 import {Events} from "components/main/account/events/events";
 import {PlusComponent} from "assets/svg/plus";
-import {contactsData} from "fakeData/contactsData";
 import {consultationsData, eventsData, notesData, videoData} from "fakeData/accountsData";
 import {randomInteger} from "utils/randomInteger";
-import {ConsultationsDataType, EventsDataType, NotesDataType, VideoDataType} from "types/dataTypes";
+import {ConsultationsDataType, ContactType, EventsDataType, NotesDataType, VideoDataType} from "types/dataTypes";
 import third from "assets/images/third.png";
 import fourth from "assets/images/fourth.png";
 
 type PropsType = {
     activeContact: number
+    contactsDataForSort: ContactType[]
 }
 
-export const Account = ({activeContact}: PropsType) => {
+export const Account = ({activeContact, contactsDataForSort}: PropsType) => {
     const [switcherValue, setSwitcherValue] = useState<string>('Заметки');
     const [notesDataForAdding, setNotesDataForAdding] = useState<NotesDataType[]>(notesData);
     const [consultationsDataForAdding, setConsultationsDataForAdding] = useState<ConsultationsDataType[]>(consultationsData);
@@ -69,7 +69,7 @@ export const Account = ({activeContact}: PropsType) => {
         }
     }
 
-    const user = contactsData.filter(el => el.id === activeContact)
+    const user = contactsDataForSort.filter(el => el.id === activeContact)
 
     return (
         <div className={styles.account}>
