@@ -6,12 +6,15 @@
   border: 1px solid rgba(205, 205, 205, 1);
   border-radius: 5px;
   padding: 10px;
+  transition: transform 0.2s ease-in-out;
   animation-timing-function: ease-out;
   animation-duration: 300ms;
 
   &:hover {
     border: 1px solid rgba(65, 152, 197, 1);
     cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.3);
 
     .itemInfoContainerIcon {
       background: rgba(65, 152, 197, 1);
