@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nice-code/static/css/main.307b13fe.css",
-    "main.js": "/nice-code/static/js/main.f72c4c20.js",
+    "main.css": "/nice-code/static/css/main.dc574836.css",
+    "main.js": "/nice-code/static/js/main.52aab642.js",
     "static/js/453.14ffd290.chunk.js": "/nice-code/static/js/453.14ffd290.chunk.js",
     "static/media/map.png": "/nice-code/static/media/map.fcdd845c9e8f90b21aec.png",
     "static/media/SFPRODISPLAYREGULAR.OTF": "/nice-code/static/media/SFPRODISPLAYREGULAR.d1f5e6e16dd4f75c3950.OTF",
@@ -15,12 +15,12 @@
     "static/media/calendar.svg": "/nice-code/static/media/calendar.f5331431952d53d293cf9088b1e485cf.svg",
     "static/media/time.svg": "/nice-code/static/media/time.1051e20b5869b720724832364d755abb.svg",
     "index.html": "/nice-code/index.html",
-    "main.307b13fe.css.map": "/nice-code/static/css/main.307b13fe.css.map",
-    "main.f72c4c20.js.map": "/nice-code/static/js/main.f72c4c20.js.map",
+    "main.dc574836.css.map": "/nice-code/static/css/main.dc574836.css.map",
+    "main.52aab642.js.map": "/nice-code/static/js/main.52aab642.js.map",
     "453.14ffd290.chunk.js.map": "/nice-code/static/js/453.14ffd290.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.307b13fe.css",
-    "static/js/main.f72c4c20.js"
+    "static/css/main.dc574836.css",
+    "static/js/main.52aab642.js"
   ]
 }
