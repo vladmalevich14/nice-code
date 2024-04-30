@@ -43,6 +43,13 @@ export const Account = ({activeContact, contactsDataForSort, setContactsDataForS
         }
     }
 
+    const onBlurHandler = () => {
+        setIsEditMode(false)
+        setContactsDataForSort(prevState => {
+            return prevState.map(el => el.id === activeContact ? {...el, name: nameValue} : el)
+        })
+    }
+
     const changeSwitcherHandler = (itemName: string) => {
         setSwitcherValue(itemName)
     }
@@ -99,13 +106,16 @@ export const Account = ({activeContact, contactsDataForSort, setContactsDataForS
                 <div className={styles.accountUserInfoBlock}>
                     <img src={user[0].photo} alt="User"/>
                     <div>
-                        {isEditMode ? <input type="text" value={nameValue} onChange={onChangeHandler} onKeyDown={onKeyDownHandler}/> :
+                        {isEditMode ?
+                            <input type="text" value={nameValue} onChange={onChangeHandler} onKeyDown={onKeyDownHandler}
+                                   onBlur={onBlurHandler}/> :
                             <h5>{user[0].name}</h5>}
                         <span>{user[0].age}, {user[0].gender}</span>
                     </div>
 
                 </div>
-                <DropDown id={0} deleteItem={() => {}} setIsEditMode={setIsEditMode}/>
+                <DropDown id={0} deleteItem={() => {
+                }} setIsEditMode={setIsEditMode}/>
             </div>
 
             <div className={styles.accountSwitcher}>

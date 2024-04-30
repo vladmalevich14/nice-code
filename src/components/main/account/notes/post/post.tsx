@@ -30,13 +30,20 @@ export const Post = ({date, text, img, deleteItem, id, setNotesDataForAdding}: P
         }
     }
 
+    const onBlurHandler = () => {
+        setIsEditMode(false)
+        setNotesDataForAdding(prevState => {
+            return prevState.map(el => el.id === id ? {...el, text: value} : el)
+        })
+    }
+
     return (
         <div className={styles.post}>
             {isEditMode ?
                 <div>
                     <span>{date}</span>
                     <textarea value={value} onChange={onChangeHandler} onKeyDown={onKeyDownHandler}
-                              className={styles.postInput}/>
+                              className={styles.postInput} onBlur={onBlurHandler}/>
                     {img && <div>
                         <img src={map} alt="map" className={styles.postImg}/>
                     </div>}
